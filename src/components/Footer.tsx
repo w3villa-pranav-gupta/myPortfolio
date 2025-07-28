@@ -61,11 +61,8 @@ const Footer = () => {
 
           {/* Right Section */}
           <div className="text-center md:text-right">
-            <p className="text-sm text-muted-foreground">
-              © 2025 Pranav Gupta
-            </p>
-            <p className="text-sm text-muted-foreground flex items-center justify-center md:justify-end gap-1 mt-1">
-              Made with <Heart className="w-4 h-4 text-red-500" fill="currentColor" /> and React
+            <p className="text-sm text-muted-foreground flex items-center justify-center md:justify-end gap-1">
+              Made with <Heart className="w-4 h-4 text-red-500" fill="currentColor" /> by Pranav
             </p>
           </div>
         </div>

@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import emailjs from '@emailjs/browser';
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -31,23 +30,9 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Initialize EmailJS with your public key
-      emailjs.init("YOUR_PUBLIC_KEY"); // You'll need to replace this with your actual EmailJS public key
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
       
-      const templateParams = {
-        from_name: `${formData.firstName} ${formData.lastName}`,
-        from_email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-        to_email: 'pranavgupta022@gmail.com'
-      };
-
-      await emailjs.send(
-        'YOUR_SERVICE_ID', // You'll need to replace this with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // You'll need to replace this with your EmailJS template ID
-        templateParams
-      );
-
       toast({
         title: "Message sent successfully!",
         description: "Thank you for your message. I'll get back to you soon.",
